@@ -72,7 +72,7 @@ export const TransactionList: React.FunctionComponent<Props> = ({
       style={style}
       showsVerticalScrollIndicator={false}
       contentContainerStyle={[
-        transactions.length === 0 && {
+        !transactions.length && {
           justifyContent: 'center',
           flex: 1,
         },

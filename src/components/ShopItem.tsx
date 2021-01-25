@@ -36,6 +36,7 @@ export const ShopItem: React.FunctionComponent<Props> = ({
   const onFavToggle = useCallback(() => {
     toggleFavourite(item);
   }, [item, toggleFavourite]);
+
   return (
     <TouchableOpacity
       style={[styles.container, style]}

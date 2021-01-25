@@ -7,10 +7,12 @@ import { getAllTransactions } from '../selectors';
 import { Palette } from '../theme/palette';
 import { TransactionList } from './TransactionList';
 
-export const LatestTransactions: React.FunctionComponent = () => {
+export const LatestTransactions: React.FunctionComponent<{
+  limit?: number;
+}> = ({ limit = 5 }) => {
   const transactions = useSelector<RootState, Transaction[]>(
     getAllTransactions,
-  ).slice(0, 5);
+  ).slice(0, limit);
 
   return (
     <View style={styles.transactions}>

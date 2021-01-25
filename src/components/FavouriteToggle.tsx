@@ -1,6 +1,11 @@
 import React from 'react';
-import { Image, ImageStyle, StyleProp, ViewStyle } from 'react-native';
-import { TouchableOpacity } from 'react-native-gesture-handler';
+import {
+  Image,
+  ImageStyle,
+  StyleProp,
+  ViewStyle,
+  TouchableOpacity,
+} from 'react-native';
 import { Icons } from '../../assets/icons';
 
 type Props = {

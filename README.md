@@ -3,7 +3,7 @@
 In order to run the app
 
 ```
-npm run install
+npm install
 npm run mock-server
 npm start ios
 ```

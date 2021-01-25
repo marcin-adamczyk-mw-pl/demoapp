@@ -66,6 +66,10 @@ export const CardScreen: ScreenComponent<'Cards'> = () => {
     [cardWidth, cards],
   );
 
+  if (!cards.length) {
+    return null;
+  }
+
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <View style={{ flex: 1 }}>
