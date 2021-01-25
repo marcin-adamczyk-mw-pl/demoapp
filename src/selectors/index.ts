@@ -8,14 +8,13 @@ const getFavoritesIds = (state: RootState) => state.favourites.shops.current;
 
 export const getAllTransactions = createSelector(
   [getTransactionData, getShops],
-  (transactions, shops): Transaction[] => {
-    return transactions.map((transaction) => ({
+  (transactions, shops): Transaction[] =>
+    transactions.map((transaction) => ({
       ...transaction,
       title:
         shops.find((shop) => shop.id === transaction.shopId)?.name ||
         'Untitled',
-    }));
-  },
+    })),
 );
 
 export const getCardTransactions = createSelector(
