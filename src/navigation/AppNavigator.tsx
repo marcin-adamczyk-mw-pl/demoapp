@@ -6,7 +6,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { RootStackRoutes } from './routes';
 import { PopupContainer } from './modals/PopupContext';
 import { useDispatch } from 'react-redux';
-import { fetchData } from '../features';
+import { fetchData, fetchFavourites } from '../features';
 import { ShopScreen } from '../screens/ShopScreen';
 
 const Stack = createStackNavigator<RootStackRoutes>();
@@ -16,6 +16,7 @@ export const AppNavigator = () => {
 
   useEffect(() => {
     dispatch(fetchData());
+    dispatch(fetchFavourites());
   }, [dispatch]);
 
   return (

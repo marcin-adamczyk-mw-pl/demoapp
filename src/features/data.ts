@@ -1,4 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { BASE_URL } from '../api';
 import { CardData, ShopData, Transaction } from '../models';
 import { Thunk } from './store';
 
@@ -21,8 +22,6 @@ export const data = createSlice({
     updateData: (_, { payload }: PayloadAction<Data>) => payload,
   },
 });
-
-const BASE_URL = 'http://localhost:3000';
 
 export const fetchData = (): Thunk => async (dispatch) => {
   try {

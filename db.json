@@ -1,7 +1,12 @@
 {
-  "settings": {
-    "defaultCardId": 1
-  },
+  "favourites": [
+    {
+      "id": 1
+    },
+    {
+      "id": 2
+    }
+  ],
   "shops": [
     {
       "id": 1,

@@ -2,10 +2,9 @@ import { createSelector } from 'reselect';
 import { RootState } from '../features';
 import { Transaction } from '../models';
 
-const getCards = (state: RootState) => state.data.cards;
 const getTransactionData = (state: RootState) => state.data.transactions;
 const getShops = (state: RootState) => state.data.shops;
-const getFavoritesIds = (state: RootState) => state.favourites.shops;
+const getFavoritesIds = (state: RootState) => state.favourites.shops.current;
 
 export const getAllTransactions = createSelector(
   [getTransactionData, getShops],
