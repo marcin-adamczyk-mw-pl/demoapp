@@ -45,13 +45,7 @@ export const ShopFavouritesList: React.FunctionComponent = () => {
   if (!shops.length) {
     return (
       <TouchableOpacity onPress={goToShoppingScreen}>
-        <View
-          style={{
-            margin: 16,
-            padding: 16,
-            backgroundColor: Palette.accent,
-            borderRadius: 20,
-          }}>
+        <View style={styles.emptyFavourites}>
           <Text style={styles.title}>Discover shops & add to favourites</Text>
         </View>
       </TouchableOpacity>
@@ -59,14 +53,7 @@ export const ShopFavouritesList: React.FunctionComponent = () => {
   }
 
   return (
-    <View
-      style={{
-        paddingVertical: 16,
-        alignItems: 'flex-start',
-        backgroundColor: Palette.accent,
-        borderRadius: 30,
-        marginHorizontal: 16,
-      }}>
+    <View style={styles.container}>
       <Text style={styles.title}>Your favourite shops</Text>
       <FlatList
         fadingEdgeLength={50}
@@ -82,11 +69,24 @@ export const ShopFavouritesList: React.FunctionComponent = () => {
 };
 
 const styles = StyleSheet.create({
+  container: {
+    paddingVertical: 16,
+    alignItems: 'flex-start',
+    backgroundColor: Palette.accent,
+    borderRadius: 30,
+    marginHorizontal: 16,
+  },
   title: {
     fontSize: 18,
     fontWeight: '600',
     color: 'white',
     marginHorizontal: 16,
     marginVertical: 8,
+  },
+  emptyFavourites: {
+    margin: 16,
+    padding: 16,
+    backgroundColor: Palette.accent,
+    borderRadius: 20,
   },
 });

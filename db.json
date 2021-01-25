@@ -1,40 +1,37 @@
 {
+  "settings": {
+    "defaultCardId": 1
+  },
   "shops": [
     {
       "id": 1,
       "name": "Spooty",
-      "cover": "https://www.payzilch.com/wp-content/themes/payzilch/assets/images/amazon-card-bg.jpg",
-      "offers": []
+      "cover": "https://www.payzilch.com/wp-content/themes/payzilch/assets/images/amazon-card-bg.jpg"
     },
     {
       "id": 2,
       "name": "WWsports",
-      "cover": "https://www.payzilch.com/wp-content/themes/payzilch/assets/images/sports-direct-card-bg.jpg",
-      "offers": []
+      "cover": "https://www.payzilch.com/wp-content/themes/payzilch/assets/images/sports-direct-card-bg.jpg"
     },
     {
       "id": 3,
       "name": "Elluxe",
-      "cover": "https://www.payzilch.com/wp-content/themes/payzilch/assets/images/prettylittlething-card-bg.jpg",
-      "offers": []
+      "cover": "https://www.payzilch.com/wp-content/themes/payzilch/assets/images/prettylittlething-card-bg.jpg"
     },
     {
       "id": 4,
       "name": "RetailFlair",
-      "cover": "https://www.payzilch.com/wp-content/themes/payzilch/assets/images/footasylum-card-bg.jpg",
-      "offers": []
+      "cover": "https://www.payzilch.com/wp-content/themes/payzilch/assets/images/footasylum-card-bg.jpg"
     },
     {
       "id": 5,
       "name": "SuperFoods",
-      "cover": "https://www.payzilch.com/wp-content/themes/payzilch/assets/images/cult-beauty-card-bg.jpg",
-      "offers": []
+      "cover": "https://www.payzilch.com/wp-content/themes/payzilch/assets/images/cult-beauty-card-bg.jpg"
     },
     {
       "id": 6,
       "name": "ZenWear",
-      "cover": "https://www.payzilch.com/wp-content/themes/payzilch/assets/images/levis-card-bg.jpg",
-      "offers": []
+      "cover": "https://www.payzilch.com/wp-content/themes/payzilch/assets/images/levis-card-bg.jpg"
     }
   ],
   "cards": [

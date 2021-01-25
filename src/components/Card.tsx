@@ -12,11 +12,11 @@ import LinearGradient from 'react-native-linear-gradient';
 import Animated, { interpolate, Easing } from 'react-native-reanimated';
 import { useTimingTransition } from 'react-native-redash/lib/module/v1';
 import { Icons } from '../../assets/icons';
-import { CardDetails } from '../models';
+import { CardData } from '../models';
 import { Palette } from '../theme/palette';
 
 export const Card: React.FunctionComponent<{
-  details: CardDetails;
+  details: CardData;
   style?: StyleProp<Animated.AnimateStyle<ViewStyle>>;
   visibility: Animated.Node<number>;
 }> = ({ details: { expires, number, cvv }, style, visibility }) => {

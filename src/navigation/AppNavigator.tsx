@@ -4,8 +4,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import MainBottomTabsNavigation from './BottomTabNavigation';
 import { createStackNavigator } from '@react-navigation/stack';
 import { RootStackRoutes } from './routes';
-import { defaultNavOptions } from './defaultNavOptions';
-import { ModalContainer } from './modals/ModalContext';
+import { PopupContainer } from './modals/PopupContext';
 import { useDispatch } from 'react-redux';
 import { fetchData } from '../features';
 import { ShopScreen } from '../screens/ShopScreen';
@@ -23,7 +22,6 @@ export const AppNavigator = () => {
     <NavigationContainer>
       <Stack.Navigator
         headerMode="screen"
-        screenOptions={defaultNavOptions}
         initialRouteName={'BottomNavigation'}>
         <Stack.Screen
           name="BottomNavigation"
@@ -36,7 +34,7 @@ export const AppNavigator = () => {
           options={{ headerShown: false }}
         />
       </Stack.Navigator>
-      <ModalContainer />
+      <PopupContainer />
     </NavigationContainer>
   );
 };

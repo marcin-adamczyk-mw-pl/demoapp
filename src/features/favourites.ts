@@ -13,8 +13,8 @@ export const favourites = createSlice({
   name: 'favourites',
   initialState,
   reducers: {
-    toggle: (state, { payload: storeId }: PayloadAction<number>) => {
-      state.shops = xor(state.shops, [storeId]);
+    toggle: (state, { payload: shopId }: PayloadAction<number>) => {
+      state.shops = xor(state.shops, [shopId]);
     },
   },
 });

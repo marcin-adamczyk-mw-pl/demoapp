@@ -1,9 +1,8 @@
 import { HeaderBackButton } from '@react-navigation/stack';
-import React, { useCallback } from 'react';
-import { Dimensions, Image, StyleSheet, Text } from 'react-native';
+import React from 'react';
+import { Dimensions, StyleSheet, Text } from 'react-native';
 import { SafeAreaView, View } from 'react-native';
 import { useSelector } from 'react-redux';
-import { FavoriteToggle } from '../components/FavouriteToggle';
 import { Header } from '../components/Header';
 import { ShopItem } from '../components/ShopItem';
 import { TransactionList } from '../components/TransactionList';
@@ -49,14 +48,7 @@ export const ShopScreen: ScreenComponent<'ShopScreen'> = ({
             }}
           />
         </View>
-        <View
-          style={{
-            marginTop: 24,
-            paddingVertical: 16,
-            backgroundColor: Palette.secondary,
-            borderRadius: 30,
-            marginHorizontal: 16,
-          }}>
+        <View style={styles.transactions}>
           <Text style={styles.title}>Latest transactions in {shop.name}</Text>
           <TransactionList
             transactions={transactions}
@@ -76,5 +68,12 @@ const styles = StyleSheet.create({
     color: 'white',
     marginHorizontal: 16,
     marginVertical: 8,
+  },
+  transactions: {
+    marginTop: 24,
+    paddingVertical: 16,
+    backgroundColor: Palette.secondary,
+    borderRadius: 30,
+    marginHorizontal: 16,
   },
 });

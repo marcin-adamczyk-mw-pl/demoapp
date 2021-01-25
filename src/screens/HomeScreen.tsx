@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react';
+import React from 'react';
 import { SafeAreaView, View } from 'react-native';
 import { Header } from '../components/Header';
 import { LatestTransactions } from '../components/LatestTransactions';

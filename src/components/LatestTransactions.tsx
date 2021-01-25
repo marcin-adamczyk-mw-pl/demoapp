@@ -13,14 +13,7 @@ export const LatestTransactions: React.FunctionComponent = () => {
   ).slice(0, 5);
 
   return (
-    <View
-      style={{
-        marginTop: 32,
-        paddingVertical: 16,
-        backgroundColor: Palette.accent,
-        borderRadius: 30,
-        marginHorizontal: 16,
-      }}>
+    <View style={styles.transactions}>
       <Text style={styles.title}>Your latest transactions</Text>
       <TransactionList
         transactions={transactions}
@@ -38,5 +31,12 @@ const styles = StyleSheet.create({
     color: 'white',
     marginHorizontal: 16,
     marginVertical: 8,
+  },
+  transactions: {
+    marginTop: 32,
+    paddingVertical: 16,
+    backgroundColor: Palette.secondary,
+    borderRadius: 30,
+    marginHorizontal: 16,
   },
 });
