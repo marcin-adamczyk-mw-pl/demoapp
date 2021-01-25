@@ -8,6 +8,7 @@ import { defaultNavOptions } from './defaultNavOptions';
 import { ModalContainer } from './modals/ModalContext';
 import { useDispatch } from 'react-redux';
 import { fetchData } from '../features';
+import { ShopScreen } from '../screens/ShopScreen';
 
 const Stack = createStackNavigator<RootStackRoutes>();
 
@@ -27,6 +28,11 @@ export const AppNavigator = () => {
         <Stack.Screen
           name="BottomNavigation"
           component={MainBottomTabsNavigation}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="ShopScreen"
+          component={ShopScreen}
           options={{ headerShown: false }}
         />
       </Stack.Navigator>

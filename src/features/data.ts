@@ -1,10 +1,10 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { ShopDetails, CardDetails, Transaction } from '../models';
+import { CardData, ShopData, Transaction } from '../models';
 import { Thunk } from './store';
 
 export type Data = {
-  cards: CardDetails[];
-  shops: ShopDetails[];
+  cards: CardData[];
+  shops: ShopData[];
   transactions: Transaction[];
 };
 

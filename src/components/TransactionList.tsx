@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useState } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleProp, StyleSheet, Text, View, ViewStyle } from 'react-native';
 import { FlatList } from 'react-native-gesture-handler';
 import Animated from 'react-native-reanimated';
 import { useTimingTransition } from 'react-native-redash/lib/module/v1';
@@ -8,12 +8,15 @@ import { Palette } from '../theme/palette';
 
 type Props = {
   transactions: Transaction[];
+  style?: StyleProp<ViewStyle>;
+  tintColor?: string;
 };
 
 const TransactionItem: React.FunctionComponent<{
   item: Transaction;
   index: number;
-}> = ({ item, index }) => {
+  tintColor?: string;
+}> = ({ item, index, tintColor }) => {
   const [visible, setVisible] = useState(false);
   const opacity = useTimingTransition(visible, { duration: 500 });
 
@@ -28,24 +31,26 @@ const TransactionItem: React.FunctionComponent<{
           justifyContent: 'space-between',
           flex: 1,
         }}>
-        <Text style={styles.title}>{item.title}</Text>
-        <Text style={styles.date}>
+        <Text style={[styles.title, { color: tintColor }]}>{item.title}</Text>
+        <Text style={[styles.date, { color: tintColor }]}>
           {new Date(item.timestamp).toLocaleString()}
         </Text>
       </View>
-      <Text style={styles.price}>-{item.amount}</Text>
+      <Text style={[styles.price, { color: tintColor }]}>-{item.amount}</Text>
     </Animated.View>
   );
 };
 
 export const TransactionList: React.FunctionComponent<Props> = ({
   transactions,
+  style,
+  tintColor,
 }) => {
   const renderItem = useCallback(
     ({ item, index }: { item: Transaction; index: number }) => (
-      <TransactionItem item={item} index={index} />
+      <TransactionItem item={item} index={index} tintColor={tintColor} />
     ),
-    [],
+    [tintColor],
   );
 
   const renderPlaceholder = useCallback(
@@ -64,7 +69,7 @@ export const TransactionList: React.FunctionComponent<Props> = ({
 
   return (
     <FlatList
-      style={{ flex: 1 }}
+      style={style}
       showsVerticalScrollIndicator={false}
       contentContainerStyle={[
         transactions.length === 0 && {

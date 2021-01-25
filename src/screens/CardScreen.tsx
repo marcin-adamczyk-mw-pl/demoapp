@@ -19,6 +19,7 @@ import Animated, {
 import { onScrollEvent } from 'react-native-redash/lib/module/v1';
 import { useSelector } from 'react-redux';
 import { Card } from '../components/Card';
+import { Header } from '../components/Header';
 import { TransactionList } from '../components/TransactionList';
 import { RootState } from '../features';
 import { CardData, Transaction } from '../models';
@@ -69,7 +70,7 @@ export const CardScreen: ScreenComponent<'Cards'> = () => {
     <SafeAreaView style={{ flex: 1 }}>
       <View style={{ flex: 1 }}>
         <View>
-          <Text style={styles.header}>Cards</Text>
+          <Header title={'Your cards'} />
           <Animated.ScrollView
             horizontal
             decelerationRate={'fast'}
@@ -124,7 +125,7 @@ export const CardScreen: ScreenComponent<'Cards'> = () => {
         </View>
         <View style={styles.transactions}>
           <Text style={styles.transactionHeader}>Transactions</Text>
-          <TransactionList transactions={transactions} />
+          <TransactionList transactions={transactions} style={{ flex: 1 }} />
         </View>
       </View>
     </SafeAreaView>
@@ -137,13 +138,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignSelf: 'center',
     justifyContent: 'space-between',
-  },
-  header: {
-    fontSize: 30,
-    fontWeight: 'bold',
-    margin: 16,
-    marginTop: 32,
-    color: Palette.accent,
   },
   indicator: {
     width: 6,
@@ -165,7 +159,8 @@ const styles = StyleSheet.create({
     flexGrow: 1,
     marginTop: 32,
     padding: 16,
-    shadowOpacity: 0.1,
+    shadowOpacity: 0.2,
+    shadowColor: Palette.accent,
     shadowOffset: { width: 0, height: 2 },
     shadowRadius: 8,
     elevation: 5,

@@ -1,4 +1,5 @@
 import { StackScreenProps } from '@react-navigation/stack';
+import { ShopData } from '../models';
 
 export type BottomTabRoutes = {
   Home: undefined;
@@ -8,6 +9,7 @@ export type BottomTabRoutes = {
 
 export type RootStackRoutes = {
   BottomNavigation: { screen?: keyof BottomTabRoutes };
+  ShopScreen: { shop: ShopData };
 };
 
 export type Routes = BottomTabRoutes & RootStackRoutes;
