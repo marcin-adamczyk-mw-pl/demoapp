@@ -1,11 +1,12 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleProp, StyleSheet, Text, View, ViewStyle } from 'react-native';
 import { Palette } from '../theme/palette';
 
-export const InfoPopup: React.FunctionComponent<{ message: string }> = ({
-  message,
-}) => (
-  <View style={styles.container}>
+export const InfoPopup: React.FunctionComponent<{
+  message: string;
+  style?: StyleProp<ViewStyle>;
+}> = ({ message, style }) => (
+  <View style={[styles.container, style]}>
     <Text style={styles.message}>{message}</Text>
   </View>
 );

@@ -70,10 +70,11 @@ const styles = StyleSheet.create({
     marginVertical: 8,
   },
   transactions: {
-    marginTop: 24,
+    marginVertical: 24,
     paddingVertical: 16,
     backgroundColor: Palette.secondary,
     borderRadius: 30,
     marginHorizontal: 16,
+    flex: 1,
   },
 });

@@ -39,11 +39,6 @@ export const fetchFavourites = (): Thunk => async (dispatch) => {
   try {
     const response = await fetch(`${BASE_URL}/favourites`);
     const data = await response.json();
-    console.log(
-      'data',
-      data,
-      data.map((d: any) => d.id),
-    );
     dispatch(favourites.actions.update(data.map((d: any) => d.id)));
   } catch (e) {
     // TODO handle network error

@@ -32,7 +32,7 @@ export const CardScreen: ScreenComponent<'Cards'> = () => {
   const [selectedCard, setSelectedCard] = useState(cards[0]);
 
   const transactions = useSelector<RootState, Transaction[]>((state) =>
-    getCardTransactions(state, selectedCard.id),
+    getCardTransactions(state, selectedCard?.id),
   );
   const scrollOffset = useValue(0);
   const windowWidth = Dimensions.get('window').width;

@@ -7,6 +7,7 @@ export type Data = {
   cards: CardData[];
   shops: ShopData[];
   transactions: Transaction[];
+  error?: boolean;
 };
 
 const initialState: Data = {
@@ -20,6 +21,9 @@ export const data = createSlice({
   initialState,
   reducers: {
     updateData: (_, { payload }: PayloadAction<Data>) => payload,
+    setError: (state) => {
+      state.error = true;
+    },
   },
 });
 
@@ -36,6 +40,6 @@ export const fetchData = (): Thunk => async (dispatch) => {
     );
     dispatch(data.actions.updateData({ cards, shops, transactions }));
   } catch (e) {
-    // TODO handle network error
+    dispatch(data.actions.setError());
   }
 };

@@ -1,5 +1,4 @@
 import React, { useCallback, useContext } from 'react';
-import { Text, View } from 'react-native';
 import { useDispatch, useSelector } from 'react-redux';
 import { InfoPopup } from '../components/InfoPopup';
 import { RootState, toggleFavouriteShop } from '../features';

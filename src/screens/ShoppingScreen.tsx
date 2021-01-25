@@ -42,15 +42,13 @@ export const ShoppingScreen: ScreenComponent<'Shopping'> = ({
     <SafeAreaView style={{ flex: 1 }}>
       <View style={{ flex: 1 }}>
         <Header title={'Discover shops'} />
-        <View>
-          <FlatList
-            data={shops}
-            style={{ padding: itemMargin }}
-            renderItem={renderItem}
-            keyExtractor={keyExtractor}
-            numColumns={numColumns}
-          />
-        </View>
+        <FlatList
+          data={shops}
+          style={{ padding: itemMargin }}
+          renderItem={renderItem}
+          keyExtractor={keyExtractor}
+          numColumns={numColumns}
+        />
       </View>
     </SafeAreaView>
   );

@@ -2,13 +2,12 @@ import React, { useCallback } from 'react';
 import {
   StyleProp,
   ViewStyle,
-  View,
   Image,
   StyleSheet,
   Text,
   TextStyle,
+  TouchableOpacity,
 } from 'react-native';
-import { TouchableOpacity } from 'react-native-gesture-handler';
 import { ShopData } from '../models';
 import { FavoriteToggle } from './FavouriteToggle';
 
@@ -20,6 +19,7 @@ type Props = {
   isFavourite: (item: ShopData) => boolean;
   toggleFavourite: (item: ShopData) => void;
 };
+
 export const ShopItem: React.FunctionComponent<Props> = ({
   item,
   style,

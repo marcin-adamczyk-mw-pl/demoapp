@@ -17,7 +17,7 @@ export const LatestTransactions: React.FunctionComponent = () => {
       <Text style={styles.title}>Your latest transactions</Text>
       <TransactionList
         transactions={transactions}
-        style={{ padding: 16, maxHeight: 350, marginTop: 8 }}
+        style={{ padding: 16, marginTop: 8 }}
         tintColor={'white'}
       />
     </View>
@@ -33,7 +33,8 @@ const styles = StyleSheet.create({
     marginVertical: 8,
   },
   transactions: {
-    marginTop: 32,
+    flex: 1,
+    marginVertical: 32,
     paddingVertical: 16,
     backgroundColor: Palette.secondary,
     borderRadius: 30,
