@@ -1,4 +1,3 @@
-import { transform } from '@babel/core';
 import React, { useCallback, useState } from 'react';
 import {
   Image,
@@ -13,11 +12,14 @@ import LinearGradient from 'react-native-linear-gradient';
 import Animated, { interpolate, Easing } from 'react-native-reanimated';
 import { useTimingTransition } from 'react-native-redash/lib/module/v1';
 import { Icons } from '../../assets/icons';
+import { CardDetails } from '../models';
+import { Palette } from '../theme/palette';
 
 export const Card: React.FunctionComponent<{
+  details: CardDetails;
   style?: StyleProp<Animated.AnimateStyle<ViewStyle>>;
   visibility: Animated.Node<number>;
-}> = ({ style, visibility }) => {
+}> = ({ details: { expires, number, cvv }, style, visibility }) => {
   const [flipped, setFlipped] = useState(false);
 
   const flipSide = useCallback(() => setFlipped(!flipped), [flipped]);
@@ -49,9 +51,9 @@ export const Card: React.FunctionComponent<{
         <Image source={Icons.logo} />
         <View>
           <View>
-            <Text style={styles.details}>5168 4000 2435 4657</Text>
+            <Text style={styles.details}>{number}</Text>
             <Text style={[styles.details, { fontSize: 12, marginTop: 12 }]}>
-              Expires: 07/24
+              Expires: {expires}
             </Text>
           </View>
           <View style={styles.mc}>
@@ -66,7 +68,7 @@ export const Card: React.FunctionComponent<{
         </View>
       </View>
     ),
-    [],
+    [expires, number],
   );
 
   const renderBack = useCallback(
@@ -74,11 +76,11 @@ export const Card: React.FunctionComponent<{
       <View style={[styles.content, { transform: [{ scaleX: -1 }] }]}>
         <Image source={Icons.logo} />
         <Text style={[styles.details, { fontSize: 12, marginTop: 12 }]}>
-          CVV: 123
+          CVV: {cvv}
         </Text>
       </View>
     ),
-    [],
+    [cvv],
   );
 
   return (
@@ -89,7 +91,7 @@ export const Card: React.FunctionComponent<{
         { opacity, transform: [{ scale }, { scaleX }] },
       ]}>
       <LinearGradient
-        colors={['rgb(87, 164,132)', 'rgb(104, 207,131)']}
+        colors={[Palette.secondary, Palette.primary]}
         start={{ x: 1, y: 0.5 }}
         end={{ x: 0, y: 0.8 }}
         style={{ flex: 1 }}>

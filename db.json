@@ -1,0 +1,130 @@
+{
+  "shops": [
+    {
+      "id": 1,
+      "name": "Spooty",
+      "cover": "https://www.payzilch.com/wp-content/themes/payzilch/assets/images/amazon-card-bg.jpg",
+      "offers": []
+    },
+    {
+      "id": 2,
+      "name": "WWsports",
+      "cover": "https://www.payzilch.com/wp-content/themes/payzilch/assets/images/sports-direct-card-bg.jpg",
+      "offers": []
+    },
+    {
+      "id": 3,
+      "name": "Elluxe",
+      "cover": "https://www.payzilch.com/wp-content/themes/payzilch/assets/images/prettylittlething-card-bg.jpg",
+      "offers": []
+    },
+    {
+      "id": 4,
+      "name": "RetailFlair",
+      "cover": "https://www.payzilch.com/wp-content/themes/payzilch/assets/images/footasylum-card-bg.jpg",
+      "offers": []
+    },
+    {
+      "id": 5,
+      "name": "SuperFoods",
+      "cover": "https://www.payzilch.com/wp-content/themes/payzilch/assets/images/cult-beauty-card-bg.jpg",
+      "offers": []
+    },
+    {
+      "id": 5,
+      "name": "ZenWear",
+      "cover": "https://www.payzilch.com/wp-content/themes/payzilch/assets/images/levis-card-bg.jpg",
+      "offers": []
+    }
+  ],
+  "cards": [
+    {
+      "id": 1,
+      "number": "5538 0179 9390 3388",
+      "cvv": "136",
+      "expires": "07/24"
+    },
+    {
+      "id": 2,
+      "number": "5414 5757 7562 7474",
+      "cvv": "127",
+      "expires": "07/25"
+    },
+    {
+      "id": 3,
+      "number": "5113 6087 7957 8460",
+      "cvv": "036",
+      "expires": "07/22"
+    },
+    {
+      "id": 4,
+      "number": "5371 4353 4946 1051",
+      "cvv": "065",
+      "expires": "04/25"
+    },
+    {
+      "id": 5,
+      "number": "5560 7519 3654 0508",
+      "cvv": "324",
+      "expires": "12/24"
+    }
+  ],
+  "transactions": [
+    {
+      "id": 8,
+      "timestamp": 1611575824000,
+      "shopId": 1,
+      "amount": 4.98,
+      "cardId": 1
+    },
+    {
+      "id": 7,
+      "timestamp": 1611044639000,
+      "shopId": 4,
+      "amount": 23.3,
+      "cardId": 1
+    },
+    {
+      "id": 6,
+      "timestamp": 1610911439000,
+      "shopId": 3,
+      "amount": 18.4,
+      "cardId": 2
+    },
+    {
+      "id": 5,
+      "timestamp": 1610825039000,
+      "shopId": 2,
+      "amount": 1.98,
+      "cardId": 1
+    },
+    {
+      "id": 4,
+      "timestamp": 1610479439000,
+      "shopId": 5,
+      "amount": 5.22,
+      "cardId": 1
+    },
+    {
+      "id": 3,
+      "timestamp": 1610375039000,
+      "shopId": 4,
+      "amount": 6.76,
+      "cardId": 1
+    },
+    {
+      "id": 2,
+      "timestamp": 1610352419000,
+      "shopId": 1,
+      "amount": 4.17,
+      "cardId": 1
+    },
+    {
+      "id": 1,
+      "timestamp": 1610212739000,
+      "shopId": 1,
+      "amount": 9.99,
+      "cardId": 2
+    }
+  ]
+}
